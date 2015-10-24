@@ -42,11 +42,11 @@ class AppKernel extends Kernel
 
     public function getCacheDir()
     {
-        return '/tmp/symfony/cache/'. $this->environment;
+        return '/tmp/symfony/cache-rato/'. $this->environment;
     }
 
     public function getLogDir()
     {
-        return '/tmp/symfony/log/'. $this->environment;
+        return '/tmp/symfony/log-rato/'. $this->environment;
     }
 }
