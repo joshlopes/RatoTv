@@ -1,0 +1,10 @@
+NelmioApiDocBundle:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /api/doc
+
+ratotv_api:
+    type: rest
+    prefix: /api/v1
+    resource: AppBundle\Controller\StreamController
+    defaults:
+        { _format: 'json'}

@@ -1,0 +1,174 @@
+AppBundle\Entity\StreamPost:
+    type: entity
+    table: stream_post
+    indexes:
+        autor:
+            columns:
+                - autor
+        alt_name:
+            columns:
+                - alt_name
+        category:
+            columns:
+                - category
+        approve:
+            columns:
+                - approve
+        allow_main:
+            columns:
+                - allow_main
+        date:
+            columns:
+                - date
+        symbol:
+            columns:
+                - symbol
+        comm_num:
+            columns:
+                - comm_num
+        tags:
+            columns:
+                - tags
+        fixed:
+            columns:
+                - fixed
+        short_story:
+            columns:
+                - short_story
+                - full_story
+                - xfields
+                - title
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        autor:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+                default: ''
+        date:
+            type: datetime
+            nullable: false
+            options:
+                default: '0000-00-00 00:00:00'
+        shortStory:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: short_story
+        fullStory:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+            column: full_story
+        xfields:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        title:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        descr:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+                default: ''
+        keywords:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        category:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+                default: '0'
+        altName:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+                default: ''
+            column: alt_name
+        commNum:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+            column: comm_num
+        allowComm:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: allow_comm
+        allowMain:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: allow_main
+        approve:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        fixed:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+        allowBr:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: allow_br
+        symbol:
+            type: string
+            nullable: false
+            length: 3
+            options:
+                fixed: false
+                default: ''
+        tags:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        metatitle:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+    lifecycleCallbacks: {  }

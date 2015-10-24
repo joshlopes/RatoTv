@@ -1,0 +1,11 @@
+/web/bundles/
+/app/cache/*
+/app/logs/*
+/build/
+/vendor/
+/bin/
+/composer.phar
+app/config/parameters.yml
+/vagrant
+!/vagrant/Vagrantfile
+!/vagrant/puphpet/config.yaml
